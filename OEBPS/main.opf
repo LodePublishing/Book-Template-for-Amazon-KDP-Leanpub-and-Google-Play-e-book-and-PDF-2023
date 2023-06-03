@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package version="3.0" unique-identifier="BookId" xmlns="http://www.idpf.org/2007/opf">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+	<dc:identifier id="BookId">urn:uuid:654ae683-e021-4edd-b350-3614ae4c3411</dc:identifier>
+	<dc:language>en</dc:language>
+	<dc:title>Even Better Books with LaTeX, the Agile Way in 2023</dc:title>
+	<dc:publisher>Clemens Lode Verlag e.K.</dc:publisher>
+	<dc:creator>Lode, Clemens</dc:creator>
+	<dc:rights>Lode, Clemens</dc:rights>
+	<meta name="cover" content="cover.jpg" />
+    <meta property="dcterms:modified">2022-11-22T14:37:47Z</meta>
+  </metadata>
+  <manifest>
+	<item id="output.htm" href="output.htm" media-type="text/html" properties="scripted"/>
+	  <item id="cover.jpg" href="images/cover.jpg" media-type="image/jpeg"/>
+        <item id="cover.png" href="images/cover.png" media-type="image/png"/>
+        <item id="white.png" href="images/white.png" media-type="image/png"/>
+      <item id="OEBPScover.jpg" href="cover.jpg" media-type="image/jpeg"/>
+        <item id="OEBPScover.png" href="cover.png" media-type="image/png"/>
+        <item id="OEBPSwhite.png" href="white.png" media-type="image/png"/>
+	<item id="nav.xhtml" href="nav.xhtml" media-type="application/xhtml+xml" properties="nav"/>
+	<item id="MathJax.js" href="MathJax.js" media-type="application/javascript"/>
+
+        <item id="kindlepreviewer.png" href="images/kindlepreviewer.png" media-type="image/png"/>
+        <item id="downloadzip.png" href="images/downloadzip.png" media-type="image/png"/>
+        <item id="href.png" href="images/href.png" media-type="image/png"/>
+        <item id="Ligature-drawing.png" href="images/Ligature-drawing.png" media-type="image/png"/>
+        <item id="1920px-Kerning-EN.png" href="images/1920px-Kerning-EN.png" media-type="image/png"/>
+        <item id="versions.png" href="images/versions.png" media-type="image/png"/>
+
+	  <item id="downloadPDF2.jpg" href="images/downloadPDF2.jpg" media-type="image/jpeg"/>
+	  <item id="output-figure2.jpg" href="tikz-cache/output-figure2.jpg" media-type="image/jpeg"/>
+	  <item id="output-figure1.jpg" href="tikz-cache/output-figure1.jpg" media-type="image/jpeg"/>
+	  <item id="output-figure0.jpg" href="tikz-cache/output-figure0.jpg" media-type="image/jpeg"/>
+	  <item id="downloadEPUB.jpg" href="images/downloadEPUB.jpg" media-type="image/jpeg"/>
+	  <item id="overleaf.jpg" href="images/overleaf.jpg" media-type="image/jpeg"/>
+	  <item id="recompile.jpg" href="images/recompile.jpg" media-type="image/jpeg"/>
+	  <item id="switchpdflatex.jpg" href="images/switchpdflatex.jpg" media-type="image/jpeg"/>
+	  <item id="projectsettings.jpg" href="images/projectsettings.jpg" media-type="image/jpeg"/>
+	  <item id="error.jpg" href="images/error.jpg" media-type="image/jpeg"/>
+	  <item id="downloadPDF.jpg" href="images/downloadPDF.jpg" media-type="image/jpeg"/>
+	  <item id="output.css" href="output.css" media-type="text/css"/>
+	  <item id="book.css" href="book.css" media-type="text/css"/>        
+  </manifest>
+  <spine>
+    <itemref idref="output.htm"/>
+    <itemref idref="nav.xhtml" linear="no"/>
+  </spine>
+
+</package>

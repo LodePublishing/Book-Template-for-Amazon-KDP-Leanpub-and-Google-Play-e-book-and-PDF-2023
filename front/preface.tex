@@ -1,0 +1,47 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% Check out the accompanying book, Even Better Books with LaTeX the Agile Way in 2023, for a discussion of the template and step-by-step instructions. https://amzn.to/3HqwgXM https://leanpub.com/eBBwLtAW/
+% The template was originally created by Clemens Lode, LODE Publishing (www.lode.de), on 1/1/2023. Feel free to use this template for your book project! 
+% I would be happy if you included a short mention in your book in order to help others to create their own books, too ("Book template based on \textit{Even Better Books with LaTeX the Agile Way in 2023} by Clemens Lode").
+% Contact me at mail@lode.de if you need help with the template or are interested in our editing and publishing services.
+% And don't forget to follow us on Instagram! https://www.instagram.com/lodepublishing/ https://www.instagram.com/betterbookswithlatex/
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% The preface is written by the author.
+
+\chapter{Preface}\label{preface:cha}
+
+\begin{myquotation}
+Feel free to add a quotation that describes your journey as the author of the book. Something personal is good.\end{myquotation}
+
+Describe how you arrived at the idea for writing the book and the personal journey of getting it from concept to creation. The reader should be able to understand why the book exists.
+
+Also, give a short overview of what the book is about.
+
+\noindent \textbf{\yourName}
+
+\textbf{\yourCity, \yourCountry, \prefaceDate}
+
+
+
+\hfil\psvectorian[height=10mm]{46}\hfil
+
+% Define the series in setup.tex if you want to display the previous part of the series.
+\ifseries
+
+\begin{center}
+	
+Check out the previous installment in this book series \bfseries \sffamily \LARGE \titleOfTheBookSeries\par:
+
+\bfseries \Large PART \partPreviousPart: \titlePreviousPart\par
+\psvectorian[height=8mm]{75}
+
+~\\
+\bfseries \small Published by \mypublishingcompany, \mypublishingcompanylocation\par
+
+\ifxetex
+    \includegraphics[width=0.5\textwidth]{\prevousCoverImageHiRes}
+\else
+    \includegraphics{\previousCoverImage}
+\fi
+\end{center}
+\fi

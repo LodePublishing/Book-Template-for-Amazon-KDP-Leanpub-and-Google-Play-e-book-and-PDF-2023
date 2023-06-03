@@ -1,0 +1,21 @@
+% You might want to adapt the sizes of the chapter title and section title fonts:
+.chapterHead { font-size: 1.5em; margin-top: 0.83em; margin-bottom: 0.83em; font-weight: bold; text-align: left; }
+.sectionHead { font-size: 1.17em; margin-top: 1em; margin-bottom: 1em; font-weight: bold; }
+.subsectionHead { margin-top: 1.33em; margin-bottom: 1.33em; font-weight: bold; }
+.subsubsectionHead { font-size: 0.83em; margin-top: 1.67em; margin-bottom: 1.67em; font-weight: bold; }
+
+% In Kindle e-books, new paragraphs have indents on the first line. If you do not like that, this is the workaround:
+p { margin-top: 1em; margin-bottom: 1em; text-indent: 0.01em; }
+
+% One way to highlight a quotation:
+.quotation { margin: 0.25em 0; padding: 0.35em 40px; line-height: 1.45; position: relative; color: #383838; }
+.quotation:before { display: block; padding-left: 10px; content: "\201C"; font-size: 80px; position: absolute; left: -15px; top: -20px; color: #7a7a7a; }
+.quotation cite { color: #999999; font-size: 14px; display: block; margin-top: 5px; }
+.quotation cite:before { content: "\2014 \2009"; }
+div.quotation { width: auto; }
+
+% Add support for small capitals:
+.sc {font-variant: small-caps;}
+
+% Print description list elements in bold:
+dt.description { font-weight: bold; }

@@ -1,0 +1,53 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% Check out the accompanying book, Even Better Books with LaTeX the Agile Way in 2023, for a discussion of the template and step-by-step instructions. https://amzn.to/3HqwgXM https://leanpub.com/eBBwLtAW/
+% The template was originally created by Clemens Lode, LODE Publishing (www.lode.de), on 1/1/2023. Feel free to use this template for your book project! 
+% I would be happy if you included a short mention in your book in order to help others to create their own books, too ("Book template based on \textit{Even Better Books with LaTeX the Agile Way in 2023} by Clemens Lode").
+% Contact me at mail@lode.de if you need help with the template or are interested in our editing and publishing services.
+% And don't forget to follow us on Instagram! https://www.instagram.com/lodepublishing/ https://www.instagram.com/betterbookswithlatex/
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+% This configures the PDF/EPUB output.
+\input{lib/ebook}
+
+% Sets up support for multiple languages.
+\input{lib/language}
+
+% Loads packages to be able to configure hyphenation.
+\input{lib/hyphenation}
+
+
+% In this package, we define the dimensions of the printed book.
+\input{lib/bookformat}
+
+% This package defines all the box commands.
+\input{lib/boxes}
+
+% Uncomment this command for more error and warning messages.
+%\input{lib/debug}
+
+% Loading this package sets up a balanced multicol environment that can end mid-page (needs to be loaded before fonts because of imakeidx package).
+\input{lib/multicols}
+
+
+% Loads the bibliography support and the bibliography files.
+\input{lib/bibliography}
+
+% This package loads and configures the fonts we use.
+\input{lib/fonts}
+
+% This initializes the TikZ system.
+\input{lib/inittikz}
+
+% This package defines the blankpage command and configures page numbering.
+\input{lib/page}
+
+% Loading this package allows the redefinition of nameref (see main.tex).
+\usepackage{letltxmacro}
+
+% This package provides the ding command for special symbols.
+\usepackage{pifont}
+
+% Loading this package adds support for numbered lists.
+\usepackage{enumitem}

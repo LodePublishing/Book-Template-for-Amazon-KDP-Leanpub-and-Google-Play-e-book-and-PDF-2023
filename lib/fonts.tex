@@ -1,0 +1,56 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% Check out the accompanying book, Even Better Books with LaTeX the Agile Way in 2023, for a discussion of the template and step-by-step instructions. https://amzn.to/3HqwgXM https://leanpub.com/eBBwLtAW/
+% The template was originally created by Clemens Lode, LODE Publishing (www.lode.de), on 1/1/2023. Feel free to use this template for your book project! 
+% I would be happy if you included a short mention in your book in order to help others to create their own books, too ("Book template based on \textit{Even Better Books with LaTeX the Agile Way in 2023} by Clemens Lode").
+% Contact me at mail@lode.de if you need help with the template or are interested in our editing and publishing services.
+% And don't forget to follow us on Instagram! https://www.instagram.com/lodepublishing/ https://www.instagram.com/betterbookswithlatex/
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% Set font size of captions to small.
+\ifxetex
+    \usepackage[labelfont=bf]{caption}
+    \captionsetup{font=small}
+\fi
+
+% Use this shorter command for textemdash.
+\newcommand{\emdash}[1][]{\textemdash}    
+
+% Set bibliography to footnote size.
+\renewcommand{\bibfont}{\footnotesize}
+% You can use ``same'' (same font as your document's), ``sf'', ``tt''  or ``rm'' for monospaced font. Also see https://www.ctan.org/pkg/url
+\usepackage{url}
+\urlstyle{same}
+
+%-------------------------------------------
+% Create hyperlinks within PDF files but do not mark them as links.
+\ifxetex
+    \usepackage{hyperref}[2011/02/05]
+    \hypersetup{hidelinks}
+\fi
+
+% The following commands improve the font face for the PDF output (font tweaks are not available for e-books).
+\ifxetex
+% Prevent splitting footnotes over several pages. See https://texfaq.org/FAQ-splitfoot
+    \interfootnotelinepenalty=10000
+
+% Set the footnote font size to very small.
+    \renewcommand{\footnotesize}{\scriptsize}
+
+
+% Set the font size of the index to very small.
+    \usepackage{imakeidx}
+    \indexsetup{othercode=\footnotesize}    
+
+% Use this command if you prefer more spaces between words rather than more hyphenations at the end of a line.
+    \sloppy    
+
+% To slightly tweak font spacing for aesthetics, use these commands.
+    \usepackage{microtype}
+    \usepackage{lmodern}
+
+% Use Linux Libertine font. For other fonts, check out http://www.tug.dk/FontCatalogue/
+    \usepackage{libertine}
+\fi
+
+

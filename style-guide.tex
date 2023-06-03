@@ -1,0 +1,153 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% Check out the accompanying book, Even Better Books with LaTeX the Agile Way in 2023, for a discussion of the template and step-by-step instructions. https://amzn.to/3HqwgXM https://leanpub.com/eBBwLtAW/
+% The template was originally created by Clemens Lode, LODE Publishing (www.lode.de), on 1/1/2023. Feel free to use this template for your book project! 
+% I would be happy if you included a short mention in your book in order to help others to create their own books, too ("Book template based on \textit{Even Better Books with LaTeX the Agile Way in 2023} by Clemens Lode").
+% Contact me at mail@lode.de if you need help with the template or are interested in our editing and publishing services.
+% And don't forget to follow us on Instagram! https://www.instagram.com/lodepublishing/ https://www.instagram.com/betterbookswithlatex/
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%
+% Sections
+%%%%%%%%%%%%%%%
+
+% Subsections
+
+% This is a comment about the next line.
+
+
+% Use bold and capitals for the introductory sentence of a paragraph.
+% use \textbf
+
+% Use italics for emphasis only in rare cases, otherwise use bold.
+% use \textit{}, \textbf
+
+% Use quotes (like "To be or not to be")sparingly. When using quotes, use italics.
+
+% use \textit{}
+
+% References to titles: italics. Check the preamble in main.tex
+
+% When referencing the name of your book, use bold, caps, and italics.
+\newcommand{\bookname}[1]{\textbf{\textit{\uppercase{#1}}}}
+
+
+% For titles, use bold, capitals, a different font, a different color, and initial caps.
+\definecolor{dark-blue}{RGB}{28, 69, 135}
+\addtokomafont{section}{\color{dark-blue}\LARGE\sffamily\bfseries}
+\addtokomafont{subsection}{\color{purple}\large\sffamily\bfseries}
+
+% If you want to suppress chapter numbers from chapter and section titles for easier reading, uncomment the following lines.
+%\renewcommand*\chapterformat{}
+%\renewcommand{\thesection}{\arabic{section}}
+
+\ifxetex
+%-------------------------------------------
+% Define space before and after a chapter, section, and subsection.
+\renewcommand*\chapterheadstartvskip{\vspace*{-3\topskip}}
+\renewcommand*\chapterheadendvskip{\vskip-.5\baselineskip\noindent{\color{gray}\rule{\linewidth}{2pt}}\par}
+\newcommand\subsectionprelude{\vspace{-\parskip}}
+\newcommand\subsectionpostlude{\vspace{-\parskip}}
+\RedeclareSectionCommands[
+    beforeskip=.5\baselineskip,
+    afterskip=0.25\baselineskip
+]{section,subsection,subsubsection}
+
+
+% Use this code to define space before and after sections.
+\makeatletter
+\let\origsubsection\subsection
+\renewcommand\subsection{\@ifstar{\starsubsection}{\nostarsubsection}}
+\newcommand\nostarsubsection[2][\relax]{
+  \subsectionprelude
+  \ifx\relax#1\origsubsection{#2}\else\origsubsection[#1]{#2}\fi
+  \subsectionpostlude}
+\newcommand\starsubsection[2][\relax]{
+  \subsectionprelude
+  \ifx\relax#1\origsubsection*{#2}\else\origsubsection*[#1]{#2}\fi
+  \subsectionpostlude}
+\makeatother
+
+\fi
+% Set the space between paragraphs and deactivate indentation for paragraphs.
+\setlength{\parskip}{1.4\baselineskip}
+\setlength{\parindent}{0pt}
+
+
+%-------------------------------------------
+% Use this command to reference literal names of real-world items that your book discusses (for example, flashcards or playing cards); it will appear in dark red and capitalized.
+\newcommand{\cardref}[1]{{\textsc{\color{red}#1}}}
+
+%-------------------------------------------
+% Use this command to use small capitals in dark blue when referencing core concepts.
+\newcommand{\concept}[1]{\textsc{\lowercase{\color{blue}#1}}}
+
+
+
+%-------------------------------------------
+% Reduce the space between each item of itemized lists.
+\setlist{nosep}
+
+% Reduce the space before and after a list (the itemize environment) to 5pt.
+\setlist[itemize]{parsep=5pt}
+
+%%%%%%%%%%%%%%%
+% Lists
+%%%%%%%%%%%%%%%
+
+\setlist[itemize,1]{wide = 0pt,labelwidth = 0cm, label=\color{red}\ding{110}} 
+
+% Use level 2 to denote a list within a list.
+\setlist[itemize,2]{wide=4pt,leftmargin=4pt, label=\color{red}\ding{121}} 
+
+%\setlist[itemize,3]{label={}} %list within a list within a list
+%\setlist[itemize,4]{label={}} %list within a list within a list within a list
+
+%%%%%%%%%%%%%%%
+% Numbered lists
+%%%%%%%%%%%%%%%
+
+% Reduce the space between each item of enumerated lists.
+\setenumerate{nosep}
+
+% Format listings (grey background).
+\lstset{breaklines=true,backgroundcolor=\color{lightgray},tabsize=1,basicstyle=\ttfamily\footnotesize}
+
+%%%%%%%%%%%%%%%
+% Page background
+%%%%%%%%%%%%%%%
+
+% Note that background pictures require the use of bleed for print (see /lib/bookformat.tex).
+\ifxetex
+\AddToHook{shipout/background}[jinwen/opac]{
+    \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=\paperheight]{images/white.png}}
+}
+
+
+
+
+%%%%%%%%%%%%%%%%%
+% Page background pictures
+%%%%%%%%%%%%%%%%%
+
+% Note that background pictures require the use of bleed for print (see /lib/bookformat.tex).
+
+\newcommand{\cutlargepic}[1]{\AddToHookNext{shipout/background}{\put (0in,-22.8em){\includegraphics[width=\paperwidth]{#1}}}~\vspace{17em}}
+
+\newcommand{\cutpic}[1]{\AddToHookNext{shipout/background}{\put (0in,-17.8em){\includegraphics[width=\paperwidth]{#1}}}~\vspace{14em}}
+   
+\newcommand{\cutbottompic}[1]{\AddToHookNext{shipout/background}{\put (0in,-\textheight){\includegraphics[width=\paperwidth]{#1}}}}    
+\else
+
+% You cannot use background pictures in e-books, so just add them as normal pictures or hide them.
+
+\newcommand{\cutlargepic}[1]{\includegraphics[width=\paperwidth]{#1}}
+\newcommand{\cutpic}[1]{\includegraphics[width=\paperwidth]{#1}}
+\newcommand{\cutbottompic}[1]{\includegraphics[width=\paperwidth]{#1}}
+
+\fi
+
+% Use these commands to create custom symbols that can be used as part of the text.
+\newcommand{\vcenteredinclude}[1]{\begingroup\setbox0=\hbox{\includegraphics[width=0.1in]{#1}}\parbox{\wd0}{\box0}\endgroup}
+\newcommand{\squareIcon}{\vcenteredinclude{images/square.png}}
+
+

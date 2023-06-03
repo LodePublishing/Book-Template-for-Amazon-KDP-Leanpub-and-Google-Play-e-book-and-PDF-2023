@@ -1,0 +1,49 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% Check out the accompanying book, Even Better Books with LaTeX the Agile Way in 2023, for a discussion of the template and step-by-step instructions. https://amzn.to/3HqwgXM https://leanpub.com/eBBwLtAW/
+% The template was originally created by Clemens Lode, LODE Publishing (www.lode.de), on 1/1/2023. Feel free to use this template for your book project! 
+% I would be happy if you included a short mention in your book in order to help others to create their own books, too ("Book template based on \textit{Even Better Books with LaTeX the Agile Way in 2023} by Clemens Lode").
+% Contact me at mail@lode.de if you need help with the template or are interested in our editing and publishing services.
+% And don't forget to follow us on Instagram! https://www.instagram.com/lodepublishing/ https://www.instagram.com/betterbookswithlatex/
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%
+% Set up the bibliography.
+%%%%%%%%%%%%%%%%%
+
+
+\ifxetex
+% See https://www.ctan.org/pkg/biblatex for documentation.
+	\usepackage[indexing=cite,style=authoryear,sortlocale=de_DE,natbib=true]{biblatex}
+\else
+	\usepackage{natbib}
+	\usepackage{usebib}
+
+	% \citetitle does not work with natbib / pdfLaTeX -> translate into \usebibentry
+	\newcommand{\citetitle}[2][]{\textit{\usebibentry{#2}{title}}}
+\fi
+
+% Load the corresponding bibliography files.
+\ifxetex
+    \babelDE{\addbibresource{chapters/bibliography/german.bib}}	\babelEN{\addbibresource{chapters/bibliography/english.bib}}
+\else
+    \babelDE{\bibinput{chapters/bibliography/german}}
+    \babelEN{\bibinput{chapters/bibliography/english}}
+\fi
+
+
+% Add a command to allow a preface for the bibliography (optional).
+\newcommand{\bibpreface}[1]{\patchcmd{\thebibliography}{\list}{#1\list}{}{}}
+
+
+
+% Use csquotes to correctly typeset quoted text according to the selected language.
+\usepackage{csquotes}
+
+
+% Write the name of a referenced section or chapter label with \nameref{label}.
+\usepackage{nameref}
+\ifxetex
+    \newcommand{\reference}[2][]{see \nameref{#2}, Chapter~\ref{#2}, p.\pageref{#2}}
+\else
+    \newcommand{\reference}[2][]{see \nameref{#2}, Chapter~\ref{#2}}
+\fi

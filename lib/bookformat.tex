@@ -1,0 +1,74 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% Check out the accompanying book, Even Better Books with LaTeX the Agile Way in 2023, for a discussion of the template and step-by-step instructions. https://amzn.to/3HqwgXM https://leanpub.com/eBBwLtAW/
+% The template was originally created by Clemens Lode, LODE Publishing (www.lode.de), on 1/1/2023. Feel free to use this template for your book project! 
+% I would be happy if you included a short mention in your book in order to help others to create their own books, too ("Book template based on \textit{Even Better Books with LaTeX the Agile Way in 2023} by Clemens Lode").
+% Contact me at mail@lode.de if you need help with the template or are interested in our editing and publishing services.
+% And don't forget to follow us on Instagram! https://www.instagram.com/lodepublishing/ https://www.instagram.com/betterbookswithlatex/
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%
+% Configure bleed.
+%%%%%%%%%%%%%%%%%
+
+% If your book includes images that extend beyond the usual margins, set bleed to 0.125in and activate the corresponding option in Amazon KDP.
+
+\newcommand{\bleed}{0in}
+%\newcommand{\bleed}{0.125in}
+
+\newcommand{\margintop}{0.3in}
+\newcommand{\marginbottom}{0.3in}
+\newcommand{\marginoutside}{0.3in}
+
+%%%%%%%%%%%%%%%%%
+% The inner margins depend on the number of pages of your book. 
+%%%%%%%%%%%%%%%%%
+
+% Note that books printed by Amazon have an upper limit of number of pages. This limits depends on your book's dimensions, whether it is a paperback or hardcover format, and whether it is printed in black and white or in color.
+% See https://kdp.amazon.com/en_US/help/topic/GVBQ3CMEQW3W2VL6
+
+% Select the margin for 24 - 150 pages by default.
+\newcommand{\margininside}{0.425in}
+% 151 - 300 pages
+%\newcommand{\margininside}{0.55in}
+% 301 - 500 pages
+%\newcommand{\margininside}{0.675in}
+% 501 - 700 pages
+%\newcommand{\margininside}{0.8in}
+% 701 - 828 pages
+%\newcommand{\margininside}{0.925in}
+
+
+%%%%%%%%%%%%%%%%%
+% Hardcover / Softcover Formats. Selecting one of these ensures that you can use the same PDF for hardcover and softcover books on Amazon.
+%%%%%%%%%%%%%%%%%
+
+%\newcommand{\bookwidth}{5.5in}\newcommand{\bookheight}{8.5in}
+% Select 6"x9" by default.
+\newcommand{\bookwidth}{6in}\newcommand{\bookheight}{9in}
+%\newcommand{\bookwidth}{6.14in}\newcommand{\bookheight}{9.21in}
+%\newcommand{\bookwidth}{7in}\newcommand{\bookheight}{10in}
+
+%%%%%%%%%%%%%%%%%
+% Hardcover-only formats. Selecting one of these requires you to create a separate PDF for a softcover version.
+%%%%%%%%%%%%%%%%%
+
+%\newcommand{\bookwidth}{8.25in}\newcommand{\bookheight}{11in}
+
+%%%%%%%%%%%%%%%%%
+% Softcover-only formats. Selecting one of these requires you to create a separate PDF for a hardcover version.
+%%%%%%%%%%%%%%%%%
+
+%\newcommand{\bookwidth}{5in}\newcommand{\bookheight}{8in}
+%\newcommand{\bookwidth}{5.25in}\newcommand{\bookheight}{8in}
+%\newcommand{\bookwidth}{5.06in}\newcommand{\bookheight}{7.81in}
+%\newcommand{\bookwidth}{6.69in}\newcommand{\bookheight}{9.61in}
+%\newcommand{\bookwidth}{7.44in}\newcommand{\bookheight}{9.69in}
+%\newcommand{\bookwidth}{7.5in}\newcommand{\bookheight}{9.25in}
+%\newcommand{\bookwidth}{8in}\newcommand{\bookheight}{10in}
+%\newcommand{\bookwidth}{8.5in}\newcommand{\bookheight}{11in}
+
+%%%%%%%%%%%%%%%%%
+% And now we are putting everything together to set the dimensions of the book.
+%%%%%%%%%%%%%%%%%
+
+\usepackage[paperwidth=\dimexpr\bookwidth+\bleed\relax, paperheight=\dimexpr\bookheight+\bleed+\bleed\relax, inner=\margininside, outer=\dimexpr\marginoutside+\bleed\relax, top=\dimexpr\margintop+\bleed\relax, bottom=\dimexpr\marginbottom+\bleed\relax,includehead, includefoot, headheight=32pt]{geometry}

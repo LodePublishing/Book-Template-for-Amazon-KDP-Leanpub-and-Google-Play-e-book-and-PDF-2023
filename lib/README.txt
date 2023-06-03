@@ -1,0 +1,1 @@
+% This directory hosts all the LaTeX configuration files, as well as new LaTeX commands, and the loading of LaTeX packages. No change from your side is necessary to create a good book. Consult the book Even Better Books with LaTeX the Agile Way 2023 for detailed descriptions of each file.

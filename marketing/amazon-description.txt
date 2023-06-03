@@ -1,0 +1,57 @@
+% DO NOT INCLUDE THIS .tex FILE IN THE main.tex; THIS IS JUST A REFERENCE FOR THE BACK COVER TEXT. Put your Amazon description here. Use it as a central place to manage your current version. You can use HTML. The text will not be included in your book.
+
+% Example text from the first edition of <i>Better Books with LaTeX the Agile Way</i> (see https://amzn.to/2Jiwpzh):
+
+<hr>
+<p>The craft of writing and marketing a book has changed significantly over the past ten years. It is no longer enough to just write a good book; you have to write for a specific audience and connect to your readers long before the book hits the shelves. Releasing part of your work early allows you to make adjustments to your book—or even discard your project entirely to invest your time into a better book idea.</p>
+
+<p>Likewise, the process of "getting published" in the book world has been revolutionized. Thanks to companies like Amazon, Google, and Leanpub, you can publish your book on your own. <i>Better Books with LaTeX the Agile Way</i> can help you to overcome obstacles along the way, using the most powerful typesetting software available (LaTeX and Overleaf).</p>
+
+<hr>
+
+
+<p>Using modern project management methods, you can organize your work into individual 'user stories" and reuse them to market your book, for example, with blog posts or newsletters. This will ensure that you make steady progress, avoid getting lost in the details, and achieve high quality consistently throughout your book.</p>
+
+<p>Bundled with this book is a template that will give you a head start in your publishing process. In fact, this very book was produced with the same template. You can check out the template here: https://www.overleaf.com/latex/templates/book-template-for-amazon-kdp-and-google-play-e-book-and-pdf/dypgzfzmhnmc</p>
+
+<p><i>If you are already proficient in LaTeX and project management, you can go straight ahead and use the template! Likewise, if you are looking for detailed explanations of each command, there are more comprehensive books and online resources available. This book is for beginners.</i></p>
+
+<hr>
+
+<p>What would lead a computer scientist to write about publishing books with LaTeX? Clemens Lode has a passion for clean design and streamlined workflows in software projects. The same methods can be applied to publishing and typesetting. In this book, he explains the provided book template—file by file—so that you can adapt it to your needs and concentrate on actually writing and marketing the book.</p>
+
+<p><i>Better Books with LaTeX the Agile Way</i> covers the entire publishing process from your initial concept to marketing your book on Amazon, Google, or Leanpub. The focus of this book is to organize your book's ideas, chapters, files, images, and formatting, as well as to guide you through the process of uploading your book to a publisher.</p>
+
+<hr>
+
+<p><b>Table of Contents:</b></p>
+
+<b>Part 1: The Agile Way</b><br />
+<li>Great Expectations</li>
+<li>Incorporate Books into Your Professional Career</li>
+<li>Starting a New Book</li>
+<li>What to Keep and What to Remove</li>
+<li>Selecting Personas</li>
+<li>How to Organize Your Ideas</li>
+<li>How to Organize Your Ideas (Fiction Books)</li>
+<li>The Rules of Your Book</li>
+<li>How to Optimize the Work Process</li>
+<li>How to Get Early Feedback from Readers</li>
+
+<b>Part 2: LaTeX</b><br />
+
+<li>Comparison of Word and LaTeX</li>
+<li>Generate Your First E-book</li>
+<li>Filling the Template</li>
+<li>LaTeX Basics</li>
+<li>Bibliography and Citations</li>
+<li>Index Creation</li>
+<li>Template Management</li>
+<li>Polishing for Print</li>
+<li>Polishing for E-book Release</li>
+<li>Publishing on Amazon KDP</li>
+<li>How to Create Cover Graphics</li>
+<li>Publishing on Google Play</li>
+<li>Publishing on Leanpub</li>
+<li>Writing a Series</li>
+<li>TeX4ht Configuration</li>

@@ -1,0 +1,35 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% Check out the accompanying book, Even Better Books with LaTeX the Agile Way in 2023, for a discussion of the template and step-by-step instructions. https://amzn.to/3HqwgXM https://leanpub.com/eBBwLtAW/
+% The template was originally created by Clemens Lode, LODE Publishing (www.lode.de), on 1/1/2023. Feel free to use this template for your book project! 
+% I would be happy if you included a short mention in your book in order to help others to create their own books, too ("Book template based on \textit{Even Better Books with LaTeX the Agile Way in 2023} by Clemens Lode").
+% Contact me at mail@lode.de if you need help with the template or are interested in our editing and publishing services.
+% And don't forget to follow us on Instagram! https://www.instagram.com/lodepublishing/ https://www.instagram.com/betterbookswithlatex/
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% This command enables checking if XeLaTeX is used.
+\usepackage{ifxetex}
+
+\ifxetex
+    % For the PDF output, load the following additional packages.
+    
+    % This adjusts figures to fit into the width of a page.
+    \usepackage{adjustbox}
+    
+    % Use this for fancy lines at the beginning of chapters and the end of sections.
+    \usepackage{psvectorian} 
+
+\else
+    % Ignore adjustbox commands (HTML files do not have a width).
+    \newcommand{\adjustbox}[2][]{#1}
+
+    % Ignore psvectorian lines.
+    \newcommand{\psvectorian}[2][]{}
+\fi
+
+% Translate newpage and hrule commands.
+\ifx\HCode\undefined
+    \newcommand{\nextpage}[1][]{}
+\else
+    \newcommand{\nextpage}[1][]{\HCode{<mbp:pagebreak />}}
+    \renewcommand{\hrule}{\HCode{<hr style="clear: both" />}}
+\fi

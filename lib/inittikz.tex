@@ -1,0 +1,29 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% Check out the accompanying book, Even Better Books with LaTeX the Agile Way in 2023, for a discussion of the template and step-by-step instructions. https://amzn.to/3HqwgXM https://leanpub.com/eBBwLtAW/
+% The template was originally created by Clemens Lode, LODE Publishing (www.lode.de), on 1/1/2023. Feel free to use this template for your book project! 
+% I would be happy if you included a short mention in your book in order to help others to create their own books, too ("Book template based on \textit{Even Better Books with LaTeX the Agile Way in 2023} by Clemens Lode").
+% Contact me at mail@lode.de if you need help with the template or are interested in our editing and publishing services.
+% And don't forget to follow us on Instagram! https://www.instagram.com/lodepublishing/ https://www.instagram.com/betterbookswithlatex/
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Tikz configuration. For details, see the main manual at  http://www.texample.net/media/pgf/builds/pgfmanualCVS2012-11-04.pdf
+
+\usepackage{tikz}
+% The pgfplots package is incompatible with tikzexternalize.
+%\usepackage{pgfplots}
+
+% Enable the usage of floats (like figures or tables) which can be placed exactly where they are defined.
+\usepackage{float}
+
+% Load various tikz libraries; you might need only some of them (or additional ones).
+\usetikzlibrary{matrix,calc,positioning,shapes.arrows,shapes.symbols,decorations.pathreplacing,patterns,shapes,backgrounds,lindenmayersystems,shadings,intersections}
+
+% Define styles of various tikz elements.
+\tikzstyle{every node}=[font=\small,node distance=40pt and 50pt,thick]
+\tikzstyle{textbox} = [rounded corners, text width=60pt, minimum height=50pt,text centered,draw=black]
+\tikzstyle{arrow} = [thick,->,>=latex]
+\tikzstyle{largearrow} = [thick,right of=book,draw,single arrow head indent=0ex,single arrow, rotate=90,node distance=130pt,text width=160pt,text centered]
+\tikzstyle{block} = [rectangle,textbox]
+\tikzstyle{textarr} = [rectangle,align=center,fill=white]
+\tikzstyle{print} = [draw,tape,tape bend top=none,tape bend height=15pt,textbox]
+\tikzstyle{wave} = [draw,tape,tape bend height=10pt,text width=60pt, minimum height=50pt,text centered,draw=black]
